@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>राजू & रानी — शुभ विवाह २०२६</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@300;400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+:root{
+  --crimson:#7B1C2E;
+  --crimson-mid:#A0263C;
+  --gold:#B8882A;
+  --gold-b:#D4A843;
+  --gold-dim:#8A6520;
+  --gold-pale:#FAF3E0;
+  --ivory:#FDFAF4;
+  --ivory-w:#F8F1E2;
+  --ink:#1A0D00;
+  --ink-mid:#3D2010;
+  --text-mid:#5C3418;
+  --text-muted:#9A7050;
+  --purple:#4A1278;
+  --purple-mid:#6B35A0;
+}
+
+/* ═══ BG SLIDESHOW ═══ */
+#bg-layer{position:fixed;inset:0;z-index:0;}
+.bg-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.8s ease-in-out;
+}
+.bg-slide.active{opacity:1;}
+.bg-overlay{
+  position:fixed;inset:0;z-index:1;
+  background:linear-gradient(to bottom,
+    rgba(6,2,0,.72) 0%,
+    rgba(12,5,0,.6) 45%,
+    rgba(6,2,0,.75) 100%);
+}
+.slide-dots{
+  position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+  z-index:50;display:flex;gap:6px;
+}
+.dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(212,168,67,.3);
+  border:.5px solid rgba(212,168,67,.45);
+  cursor:pointer;transition:all .3s;
+}
+.dot.on{background:var(--gold-b);transform:scale(1.5);}
+
+/* ═══ TOPBAR ═══ */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:52px;
+  background:rgba(8,3,0,.92);
+  border-bottom:1.5px solid var(--gold-b);
+  backdrop-filter:blur(12px);
+  display:flex;align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+}
+.brand{
+  font-family:'Great Vibes',cursive;
+  font-size:1.75rem;color:var(--gold-b);
+  letter-spacing:.5px;
+}
+.lang-row{display:flex;gap:6px;}
+.lbtn{
+  background:rgba(212,168,67,.08);
+  border:.5px solid rgba(212,168,67,.35);
+  color:rgba(212,168,67,.65);
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:10px;padding:4px 13px;
+  border-radius:30px;cursor:pointer;transition:all .25s;
+}
+.lbtn.on,.lbtn:hover{
+  background:var(--gold-b);color:#100800;
+  border-color:var(--gold-b);font-weight:700;
+}
+
+/* ═══ NAV ═══ */
+.nav{
+  position:fixed;top:52px;left:0;right:0;z-index:99;
+  background:rgba(8,3,0,.85);
+  border-bottom:1px solid rgba(212,168,67,.18);
+  backdrop-filter:blur(12px);
+  display:flex;justify-content:center;flex-wrap:wrap;
+}
+.nav a{
+  color:rgba(212,168,67,.65);
+  text-decoration:none;
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:12px;padding:12px 22px;
+  border-right:.5px solid rgba(212,168,67,.1);
+  transition:all .25s;letter-spacing:.04em;
+  position:relative;
+}
+.nav a:first-child{border-left:.5px solid rgba(212,168,67,.1);}
+.nav a:hover,.nav a.active{
+  background:rgba(212,168,67,.1);
+  color:var(--gold-b);
+}
+/* Highlight — invitation link */
+.nav a.inv-link{
+  background:rgba(123,28,46,.25);
+  color:var(--gold-b);
+  border-left:.5px solid rgba(212,168,67,.1);
+}
+.nav a.inv-link:hover{background:var(--crimson);color:#FFF5CC;}
+
+body{font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh;overflow-x:hidden;}
+
+/* ═══ SECTIONS ═══ */
+section{position:relative;z-index:5;}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  padding:120px 16px 80px;
+}
+
+/* Hero center content */
+.hero-inner{
+  text-align:center;
+  animation:fadeUp 1s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+
+.om-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:86px;height:86px;border-radius:50%;
+  border:2px solid var(--gold-b);
+  background:radial-gradient(circle,rgba(212,168,67,.15),transparent 70%);
+  animation:omFloat 4s ease-in-out infinite;
+  margin-bottom:22px;
+}
+.om-badge span{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:2.3rem;color:var(--gold-b);line-height:1;
+}
+@keyframes omFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+
+.ganesh-line{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.92rem;letter-spacing:.24em;
+  color:rgba(212,168,67,.8);
+  margin-bottom:4px;display:block;
+}
+.ganesh-en{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.78rem;color:rgba(212,168,67,.45);
+  display:block;margin-bottom:28px;
+}
+
+/* Ruled divider */
+.hrule{
+  display:flex;align-items:center;gap:14px;
+  max-width:320px;margin:0 auto 28px;
+}
+.hrule::before,.hrule::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold-b),transparent);
+}
+.hrd{width:7px;height:7px;background:var(--gold-b);transform:rotate(45deg);}
+
+.hero-title{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:clamp(3rem,9vw,6.5rem);font-weight:800;
+  color:#FFF5CC;
+  line-height:1;letter-spacing:.04em;
+  text-shadow:0 2px 30px rgba(212,168,67,.2);
+  margin-bottom:8px;display:block;
+}
+.hero-sub{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:clamp(1.2rem,3vw,1.9rem);
+  color:var(--gold-b);letter-spacing:.14em;
+  display:block;margin-bottom:40px;
+}
+
+/* Names */
+.names-row{
+  display:flex;align-items:center;justify-content:center;
+  gap:32px;flex-wrap:wrap;
+  margin-bottom:40px;
+}
+.name-pill{
+  background:rgba(253,250,244,.1);
+  border:.5px solid rgba(212,168,67,.35);
+  backdrop-filter:blur(8px);
+  padding:22px 36px;
+  border-radius:2px;
+  text-align:center;
+  transition:all .3s;
+  min-width:200px;
+}
+.name-pill:hover{
+  background:rgba(253,250,244,.18);
+  border-color:var(--gold-b);
+  transform:translateY(-4px);
+}
+.name-role{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.72rem;color:rgba(212,168,67,.6);
+  letter-spacing:.18em;text-transform:uppercase;
+  display:block;margin-bottom:8px;
+}
+.name-dv{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;
+  color:#FFF5CC;line-height:1.1;display:block;
+}
+.name-en{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:clamp(1rem,2vw,1.35rem);
+  color:var(--gold-b);display:block;margin-top:4px;
+}
+
+.heart-sep{
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.heart-icon{
+  font-size:2.6rem;color:var(--crimson-mid);
+  animation:hb 2.5s ease-in-out infinite;
+}
+@keyframes hb{
+  0%,100%{transform:scale(1);}
+  20%{transform:scale(1.22);}
+  40%{transform:scale(1);}
+  60%{transform:scale(1.12);}
+}
+.heart-lbl{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.62rem;color:rgba(212,168,67,.55);
+  letter-spacing:.12em;
+}
+
+/* Date badges */
+.dates-row{
+  display:flex;gap:14px;justify-content:center;
+  flex-wrap:wrap;margin-bottom:28px;
+}
+.date-chip{
+  background:rgba(123,28,46,.6);
+  border:1.5px solid var(--gold-b);
+  backdrop-filter:blur(6px);
+  border-radius:60px;padding:14px 32px;
+  text-align:center;
+  transition:transform .2s,box-shadow .2s;
+}
+.date-chip:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(123,28,46,.5);}
+.date-dv{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:1.5rem;font-weight:800;
+  color:var(--gold-b);line-height:1.1;display:block;
+}
+.date-sub{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.72rem;color:rgba(212,168,67,.65);margin-top:2px;display:block;
+}
+
+/* CTA buttons */
+.hero-ctas{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:36px;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--crimson);
+  border:1.5px solid var(--gold-b);
+  color:#FFF5CC;
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.95rem;letter-spacing:.06em;
+  padding:14px 32px;border-radius:2px;
+  text-decoration:none;
+  transition:all .3s;
+  box-shadow:0 8px 24px rgba(123,28,46,.4);
+}
+.btn-primary:hover{background:#A0263C;transform:translateY(-3px);box-shadow:0 14px 32px rgba(123,28,46,.55);}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(212,168,67,.1);
+  border:.5px solid rgba(212,168,67,.4);
+  color:var(--gold-b);
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.95rem;letter-spacing:.06em;
+  padding:14px 32px;border-radius:2px;
+  text-decoration:none;
+  transition:all .3s;
+  backdrop-filter:blur(4px);
+}
+.btn-secondary:hover{background:rgba(212,168,67,.18);border-color:var(--gold-b);transform:translateY(-3px);}
+
+/* Scroll hint */
+.scroll-hint{
+  display:flex;flex-direction:column;align-items:center;gap:7px;
+  opacity:.45;
+}
+.scroll-mouse{
+  width:22px;height:36px;
+  border:1.5px solid var(--gold-b);
+  border-radius:11px;
+  position:relative;
+}
+.scroll-mouse::after{
+  content:'';width:3px;height:5px;
+  background:var(--gold-b);border-radius:2px;
+  position:absolute;top:6px;left:50%;transform:translateX(-50%);
+  animation:scrollDot 1.8s ease-in-out infinite;
+}
+@keyframes scrollDot{0%{opacity:1;transform:translateX(-50%) translateY(0);}100%{opacity:0;transform:translateX(-50%) translateY(10px);}}
+.scroll-hint span{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.65rem;color:var(--gold-b);letter-spacing:.12em;
+}
+
+/* ── VENUE STRIP ── */
+#venue-strip{
+  padding:50px 20px;
+  background:rgba(6,2,0,.78);
+  backdrop-filter:blur(2px);
+  text-align:center;
+}
+.vs-inner{
+  max-width:680px;margin:0 auto;
+  padding:32px 40px;
+  background:rgba(253,250,244,.07);
+  border:.5px solid rgba(212,168,67,.25);
+}
+.vs-icon{font-size:1.6rem;margin-bottom:12px;}
+.vs-label{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.78rem;color:var(--gold);letter-spacing:.18em;
+  text-transform:uppercase;display:block;margin-bottom:10px;
+}
+.vs-name{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:1.4rem;font-weight:700;color:#FFF5CC;
+  margin-bottom:4px;
+}
+.vs-city{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.9rem;color:rgba(212,168,67,.65);
+}
+.vs-events{
+  margin-top:18px;padding-top:16px;
+  border-top:.5px solid rgba(212,168,67,.15);
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.85rem;color:rgba(212,168,67,.6);
+  letter-spacing:.05em;
+}
+
+/* ── EVENTS ── */
+#events{
+  padding:90px 20px 80px;
+  background:rgba(6,2,0,.82);
+  backdrop-filter:blur(2px);
+}
+.sec-head{text-align:center;margin-bottom:52px;}
+.sec-tag{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.8rem;letter-spacing:.22em;
+  color:rgba(212,168,67,.6);
+  border-bottom:.5px solid rgba(212,168,67,.18);
+  padding-bottom:6px;display:inline-block;margin-bottom:10px;
+}
+.sec-title{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;
+  color:#FFF5CC;line-height:1.1;
+}
+.timeline{max-width:800px;margin:0 auto;position:relative;}
+.timeline::before{
+  content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom,transparent,var(--gold-b),var(--gold),transparent);
+  transform:translateX(-50%);
+}
+.trow{
+  display:flex;margin-bottom:30px;position:relative;align-items:flex-start;
+}
+.trow:nth-child(odd){flex-direction:row;}
+.trow:nth-child(even){flex-direction:row-reverse;}
+.tdot{
+  position:absolute;left:50%;top:22px;
+  transform:translateX(-50%);
+  width:13px;height:13px;
+  background:var(--gold-b);border-radius:50%;
+  border:2.5px solid rgba(6,2,0,.9);
+  box-shadow:0 0 0 4px rgba(212,168,67,.22);
+  z-index:3;
+}
+.tcont{
+  flex:1;max-width:calc(50% - 30px);
+  background:rgba(253,250,244,.08);
+  border:.5px solid rgba(212,168,67,.28);
+  padding:18px 20px;
+  transition:all .25s;
+  backdrop-filter:blur(4px);
+}
+.tcont:hover{
+  background:rgba(253,250,244,.15);
+  border-color:var(--gold-b);
+  transform:translateY(-3px);
+}
+.te-ico{font-size:1.5rem;margin-bottom:6px;}
+.te-badge{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.7rem;color:rgba(212,168,67,.65);
+  letter-spacing:.1em;display:block;margin-bottom:5px;
+}
+.te-title{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:1.08rem;font-weight:700;color:#FFF5CC;
+}
+.te-en{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.78rem;color:rgba(212,168,67,.55);margin-top:2px;
+}
+.spacer{flex:1;max-width:calc(50% - 30px);}
+
+/* ── GALLERY ── */
+#gallery{
+  padding:90px 20px 80px;
+  background:rgba(6,2,0,.78);
+  backdrop-filter:blur(2px);
+}
+.g-grid{
+  max-width:1120px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:220px;
+  gap:12px;
+}
+.gi{
+  position:relative;overflow:hidden;
+  border:.5px solid rgba(212,168,67,.25);
+  cursor:pointer;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+}
+.gi:hover{
+  transform:translateY(-5px) scale(1.01);
+  border-color:var(--gold-b);
+  box-shadow:0 18px 40px rgba(0,0,0,.6);
+  z-index:2;
+}
+.gi img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s;
+  filter:brightness(.85) saturate(1.15);
+}
+.gi:hover img{transform:scale(1.08);filter:brightness(.95) saturate(1.25);}
+.gi-cap{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,2,0,.85) 0%,transparent 55%);
+  display:flex;flex-direction:column;
+  justify-content:flex-end;padding:14px;
+  opacity:0;transition:opacity .3s;
+}
+.gi:hover .gi-cap{opacity:1;}
+.gi-cap-dv{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.9rem;font-weight:700;color:#FFF5CC;
+}
+.gi-cap-en{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.72rem;color:rgba(212,168,67,.75);margin-top:1px;
+}
+/* Featured grid items */
+.gi.w2{grid-column:span 2;}
+.gi.h2{grid-row:span 2;}
+
+/* ── LIGHTBOX ── */
+.lb{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.97);z-index:200;
+  flex-direction:column;align-items:center;justify-content:center;
+}
+.lb.open{display:flex;}
+.lb img{
+  max-width:88%;max-height:80vh;
+  border:.5px solid var(--gold-b);
+  box-shadow:0 0 60px rgba(212,168,67,.15);
+}
+.lb-cap{
+  margin-top:14px;
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.92rem;color:#FFF5CC;
+  text-align:center;
+}
+.lb-x{
+  position:absolute;top:22px;right:28px;
+  font-size:34px;color:rgba(212,168,67,.55);
+  cursor:pointer;background:none;border:none;
+  transition:all .2s;line-height:1;
+}
+.lb-x:hover{color:var(--gold-b);transform:rotate(90deg);}
+.lb-arr{
+  position:absolute;top:50%;transform:translateY(-50%);
+  font-size:26px;color:rgba(212,168,67,.5);
+  cursor:pointer;background:none;border:none;
+  padding:12px;transition:color .2s;
+}
+.lb-arr:hover{color:var(--gold-b);}
+.lb-prev{left:14px;}
+.lb-next{right:14px;}
+
+/* ── PARENTS ── */
+#parents{
+  padding:80px 20px;
+  background:rgba(6,2,0,.84);
+  backdrop-filter:blur(2px);
+}
+.parents-grid{
+  max-width:700px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1px 1fr;gap:0 24px;
+}
+.p-divider{
+  background:linear-gradient(to bottom,transparent,rgba(212,168,67,.3),transparent);
+  align-self:stretch;
+}
+.p-block{text-align:center;padding:28px 20px;}
+.p-side{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.75rem;letter-spacing:.18em;color:var(--gold);
+  text-transform:uppercase;display:block;
+  border-bottom:.5px solid rgba(212,168,67,.18);
+  padding-bottom:8px;margin-bottom:12px;
+}
+.p-name{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:1.15rem;font-weight:700;
+  color:#FFF5CC;line-height:1.5;
+}
+.p-place{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.82rem;color:rgba(212,168,67,.55);margin-top:5px;
+}
+
+/* ── COUNTDOWN (standalone) ── */
+#countdown-sec{
+  padding:60px 20px;text-align:center;
+  background:rgba(6,2,0,.8);
+}
+.cdown{
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+}
+.cbox{
+  background:rgba(123,28,46,.25);
+  border:.5px solid rgba(212,168,67,.3);
+  padding:18px 20px;min-width:76px;text-align:center;
+}
+.cnum{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.2rem;font-weight:600;color:var(--gold-b);line-height:1;display:block;
+}
+.clbl{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.65rem;color:rgba(212,168,67,.5);
+  letter-spacing:.1em;display:block;margin-top:4px;
+}
+
+/* ── BLESSINGS ── */
+#blessings{
+  padding:90px 20px 80px;text-align:center;
+  background:rgba(6,2,0,.82);
+  backdrop-filter:blur(2px);
+}
+.bless-box{
+  max-width:600px;margin:0 auto;
+  background:rgba(253,250,244,.07);
+  border:.5px solid rgba(212,168,67,.25);
+  padding:48px 36px;
+  backdrop-filter:blur(4px);
+}
+.b-ico{font-size:2.2rem;margin-bottom:14px;}
+.b-title{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:1.5rem;color:#FFF5CC;margin-bottom:12px;
+}
+.b-dv{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.95rem;color:rgba(212,168,67,.75);
+  line-height:2;
+}
+.b-en{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.88rem;color:rgba(212,168,67,.45);
+  margin-top:10px;line-height:1.9;display:block;
+}
+.shloka{
+  margin-top:20px;padding-top:16px;
+  border-top:.5px solid rgba(212,168,67,.12);
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:.82rem;color:rgba(212,168,67,.4);
+}
+
+/* ── FOOTER ── */
+footer{
+  position:relative;z-index:5;
+  text-align:center;padding:32px 20px;
+  background:rgba(2,0,0,.94);
+  border-top:1px solid rgba(212,168,67,.18);
+}
+footer .fn{
+  font-family:'Great Vibes',cursive;
+  font-size:1.9rem;color:var(--gold-b);
+  margin-bottom:8px;
+}
+footer p{
+  font-family:'IM Fell English',serif;font-style:italic;
+  font-size:.82rem;color:rgba(212,168,67,.4);
+  line-height:2.2;
+}
+
+/* ── PETALS ── */
+.petal{
+  position:fixed;font-size:18px;opacity:.1;
+  animation:petalFloat 9s ease-in-out infinite;
+  pointer-events:none;z-index:3;
+}
+.petal:nth-child(1){left:2%;bottom:8%;animation-duration:12s;}
+.petal:nth-child(2){right:3%;bottom:12%;animation-duration:10s;animation-delay:1s;font-size:22px;}
+.petal:nth-child(3){left:4%;top:20%;animation-duration:14s;animation-delay:2.5s;font-size:15px;}
+.petal:nth-child(4){right:5%;top:16%;animation-duration:11s;animation-delay:3.5s;}
+.petal:nth-child(5){left:1%;top:50%;animation-duration:13s;animation-delay:5s;}
+.petal:nth-child(6){right:1.5%;top:65%;animation-duration:9s;animation-delay:4s;}
+@keyframes petalFloat{
+  0%,100%{transform:translateY(0) rotate(0deg);}
+  33%{transform:translateY(-18px) rotate(8deg);}
+  66%{transform:translateY(-7px) rotate(-5deg);}
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:680px){
+  .names-row{flex-direction:column;align-items:center;}
+  .heart-sep{flex-direction:row;gap:12px;}
+  .g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}
+  .gi.w2,.gi.h2{grid-column:span 1;grid-row:span 1;}
+  .parents-grid{grid-template-columns:1fr;}
+  .p-divider{display:none;}
+  .timeline::before{left:18px;}
+  .trow,.trow:nth-child(even){flex-direction:column;padding-left:38px;}
+  .tdot{left:18px;transform:none;}
+  .tcont{max-width:100%;}
+  .spacer{display:none;}
+  .cdown{gap:8px;}
+  .cbox{min-width:58px;padding:14px 12px;}
+  .cnum{font-size:1.7rem;}
+  .hero-ctas{flex-direction:column;align-items:center;}
+  .topbar{padding:0 16px;}
+  .nav a{font-size:10px;padding:10px 10px;}
+}
+</style>
+</head>
+<body>
+
+<!-- BG -->
+<div id="bg-layer"></div>
+<div class="bg-overlay"></div>
+<div class="slide-dots" id="dots"></div>
+
+<!-- Petals -->
+<span class="petal">🌸</span>
+<span class="petal">🪷</span>
+<span class="petal">🌺</span>
+<span class="petal">🌸</span>
+<span class="petal">🪷</span>
+<span class="petal">🌼</span>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="brand">Raju & Rani</span>
+  <div class="lang-row">
+    <button class="lbtn on" data-l="hi">🇮🇳 हिंदी</button>
+    <button class="lbtn" data-l="en">🇬🇧 English</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <a href="#hero" class="active" data-hi="🏠 होम" data-en="🏠 Home">🏠 होम</a>
+  <a href="#events" data-hi="🎉 कार्यक्रम" data-en="🎉 Events">🎉 कार्यक्रम</a>
+  <a href="#gallery" data-hi="📸 गैलरी" data-en="📸 Gallery">📸 गैलरी</a>
+  <a href="#parents" data-hi="👨‍👩‍👧 परिवार" data-en="👨‍👩‍👧 Family">👨‍👩‍👧 परिवार</a>
+  <a href="#blessings" data-hi="🙏 आशीर्वाद" data-en="🙏 Blessings">🙏 आशीर्वाद</a>
+  <a href="invitation.html" class="inv-link" data-hi="📜 निमंत्रण पत्र" data-en="📜 Invitation Card">📜 निमंत्रण पत्र</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="om-badge"><span>ॐ</span></div>
+    <span class="ganesh-line" data-hi="॥ श्री गणेशाय नमः ॥" data-en="॥ Shri Ganeshaya Namah ॥">॥ श्री गणेशाय नमः ॥</span>
+    <span class="ganesh-en">Invocation to Lord Ganesha — Remover of All Obstacles</span>
+
+    <div class="hrule"><div class="hrd"></div></div>
+
+    <span class="hero-title" data-hi="शुभ विवाह" data-en="Auspicious Wedding">शुभ विवाह</span>
+    <span class="hero-sub">Shubh Vivah · 2026</span>
+
+    <div class="names-row">
+      <div class="name-pill">
+        <span class="name-role" data-hi="वर · Groom" data-en="Groom">वर · Groom</span>
+        <span class="name-dv" data-hi="राजू ठाकुर" data-en="Raju Thakur">राजू ठाकुर</span>
+        <span class="name-en">Raju Thakur</span>
+      </div>
+      <div class="heart-sep">
+        <div class="heart-icon">♡</div>
+        <div class="heart-lbl" data-hi="विवाह" data-en="Weds">विवाह</div>
+      </div>
+      <div class="name-pill">
+        <span class="name-role" data-hi="वधू · Bride" data-en="Bride">वधू · Bride</span>
+        <span class="name-dv" data-hi="रानी ठाकुर" data-en="Rani Thakur">रानी ठाकुर</span>
+        <span class="name-en">Rani Thakur</span>
+      </div>
+    </div>
+
+    <div class="dates-row">
+      <div class="date-chip">
+        <span class="date-dv" data-hi="७ मई २०२६" data-en="7th May 2026">७ मई २०२६</span>
+        <span class="date-sub" data-hi="हल्दी · मेहंदी · संगीत" data-en="Haldi · Mehendi · Sangeet">हल्दी · मेहंदी · संगीत</span>
+      </div>
+      <div class="date-chip">
+        <span class="date-dv" data-hi="८ मई २०२६" data-en="8th May 2026">८ मई २०२६</span>
+        <span class="date-sub" data-hi="विवाह · रिसेप्शन" data-en="Wedding · Reception">विवाह · रिसेप्शन</span>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="invitation.html" class="btn-primary">
+        <span data-hi="📜 निमंत्रण पत्र देखें" data-en="📜 View Invitation Card">📜 निमंत्रण पत्र देखें</span>
+      </a>
+      <a href="#events" class="btn-secondary">
+        <span data-hi="🎉 कार्यक्रम देखें" data-en="🎉 View Schedule">🎉 कार्यक्रम देखें</span>
+      </a>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-mouse"></div>
+      <span data-hi="नीचे जाएं" data-en="Scroll Down">नीचे जाएं</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VENUE STRIP ═══ -->
+<section id="venue-strip">
+  <div class="vs-inner reveal">
+    <div class="vs-icon">📍</div>
+    <span class="vs-label" data-hi="विवाह स्थान" data-en="Venue">विवाह स्थान</span>
+    <div class="vs-name" data-hi="इजरहटा, दरभंगा, बिहार" data-en="Ijrahata, Darbhanga, Bihar">इजरहटा, दरभंगा, बिहार</div>
+    <div class="vs-city">Ijrahata, Darbhanga, Bihar</div>
+    <div class="vs-events">🌿 हल्दी &nbsp;·&nbsp; मेहंदी &nbsp;·&nbsp; संगीत &nbsp;·&nbsp; विवाह &nbsp;·&nbsp; रिसेप्शन 🌸</div>
+  </div>
+</section>
+
+<!-- ═══ COUNTDOWN ═══ -->
+<section id="countdown-sec">
+  <div class="sec-head" style="margin-bottom:24px;">
+    <div class="sec-tag" data-hi="शादी में बचा समय" data-en="Time Until Wedding">शादी में बचा समय</div>
+  </div>
+  <div class="cdown reveal">
+    <div class="cbox"><span class="cnum" id="cd-d">--</span><span class="clbl" data-hi="दिन" data-en="Days">दिन</span></div>
+    <div class="cbox"><span class="cnum" id="cd-h">--</span><span class="clbl" data-hi="घंटे" data-en="Hours">घंटे</span></div>
+    <div class="cbox"><span class="cnum" id="cd-m">--</span><span class="clbl" data-hi="मिनट" data-en="Mins">मिनट</span></div>
+    <div class="cbox"><span class="cnum" id="cd-s">--</span><span class="clbl" data-hi="सेकंड" data-en="Secs">सेकंड</span></div>
+  </div>
+</section>
+
+<!-- ═══ EVENTS ═══ -->
+<section id="events">
+  <div class="sec-head">
+    <div class="sec-tag" data-hi="कार्यक्रम सूची" data-en="Schedule">कार्यक्रम सूची</div>
+    <div class="sec-title" data-hi="विवाह समारोह" data-en="Wedding Ceremonies">विवाह समारोह</div>
+  </div>
+  <div class="timeline">
+    <div class="trow reveal">
+      <div class="tcont">
+        <div class="te-ico">🌿</div>
+        <span class="te-badge">७ मई · सुबह 10:00</span>
+        <div class="te-title" data-hi="हल्दी" data-en="Haldi">हल्दी</div>
+        <div class="te-en">Turmeric Ceremony</div>
+      </div>
+      <div class="tdot"></div>
+      <div class="spacer"></div>
+    </div>
+    <div class="trow reveal">
+      <div class="spacer"></div>
+      <div class="tdot"></div>
+      <div class="tcont">
+        <div class="te-ico">🪷</div>
+        <span class="te-badge">७ मई · दोपहर 3:00</span>
+        <div class="te-title" data-hi="मेहंदी" data-en="Mehendi">मेहंदी</div>
+        <div class="te-en">Mehendi Night</div>
+      </div>
+    </div>
+    <div class="trow reveal">
+      <div class="tcont">
+        <div class="te-ico">🎶</div>
+        <span class="te-badge">७ मई · शाम 7:00</span>
+        <div class="te-title" data-hi="संगीत संध्या" data-en="Sangeet">संगीत संध्या</div>
+        <div class="te-en">Musical Evening</div>
+      </div>
+      <div class="tdot"></div>
+      <div class="spacer"></div>
+    </div>
+    <div class="trow reveal">
+      <div class="spacer"></div>
+      <div class="tdot" style="width:17px;height:17px;background:#FFD984;box-shadow:0 0 0 5px rgba(212,168,67,.28);top:19px;"></div>
+      <div class="tcont">
+        <div class="te-ico">🔥</div>
+        <span class="te-badge">८ मई · शुभ मुहूर्त</span>
+        <div class="te-title" data-hi="विवाह · सात फेरे" data-en="Wedding Ceremony">विवाह · सात फेरे</div>
+        <div class="te-en">Sacred Wedding Vows</div>
+      </div>
+    </div>
+    <div class="trow reveal">
+      <div class="tcont">
+        <div class="te-ico">🥂</div>
+        <span class="te-badge">८ मई · शाम 7:00</span>
+        <div class="te-title" data-hi="रिसेप्शन" data-en="Reception">रिसेप्शन</div>
+        <div class="te-en">Grand Reception</div>
+      </div>
+      <div class="tdot"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="sec-head">
+    <div class="sec-tag" data-hi="📸 हमारी यादें" data-en="📸 Our Memories">📸 हमारी यादें</div>
+    <div class="sec-title" data-hi="फोटो गैलरी" data-en="Photo Gallery">फोटो गैलरी</div>
+  </div>
+  <div class="g-grid" id="g-grid"></div>
+</section>
+
+<!-- Lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-x" onclick="closeLb()">×</button>
+  <button class="lb-arr lb-prev" onclick="lbNav(-1)">‹</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-cap" id="lb-cap"></div>
+  <button class="lb-arr lb-next" onclick="lbNav(1)">›</button>
+</div>
+
+<!-- ═══ PARENTS ═══ -->
+<section id="parents">
+  <div class="sec-head">
+    <div class="sec-tag" data-hi="परिवार" data-en="Family">परिवार</div>
+    <div class="sec-title" data-hi="दोनों परिवार" data-en="Both Families">दोनों परिवार</div>
+  </div>
+  <div class="parents-grid reveal">
+    <div class="p-block">
+      <span class="p-side" data-hi="वर पक्ष · Groom's Family" data-en="Groom's Family">वर पक्ष · Groom's Family</span>
+      <div class="p-name" data-hi="श्री सुखराम ठाकुर" data-en="Shri Sukhram Thakur">श्री सुखराम ठाकुर</div>
+      <div class="p-place">Ijrahata, Darbhanga, Bihar</div>
+    </div>
+    <div class="p-divider"></div>
+    <div class="p-block">
+      <span class="p-side" data-hi="वधू पक्ष · Bride's Family" data-en="Bride's Family">वधू पक्ष · Bride's Family</span>
+      <div class="p-name" data-hi="श्री मंगल शर्मा" data-en="Shri Mangal Sharma">श्री मंगल शर्मा</div>
+      <div class="p-place">Dhamuara, Darbhanga, Bihar</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLESSINGS ═══ -->
+<section id="blessings">
+  <div class="bless-box reveal">
+    <div class="b-ico">🙏</div>
+    <div class="b-title" data-hi="आप सभी का हार्दिक स्वागत है" data-en="Heartfelt Welcome to All">आप सभी का हार्दिक स्वागत है</div>
+    <div class="b-dv" data-hi="अपनी उपस्थिति और आशीर्वाद से इस शुभ अवसर को यादगार बनाएं।" data-en="Grace this auspicious occasion with your presence and heartfelt blessings.">अपनी उपस्थिति और आशीर्वाद से इस शुभ अवसर को यादगार बनाएं।</div>
+    <div class="hrule" style="max-width:220px;margin:20px auto;"><div class="hrd"></div></div>
+    <span class="b-en">॥ सर्वे भवन्तु सुखिनः · May All Be Happy ॥</span>
+    <div class="shloka">ईश्वर की कृपा से &nbsp;·&nbsp; With Divine Blessings</div>
+  </div>
+
+  <!-- Invitation CTA -->
+  <div style="text-align:center;margin-top:40px;">
+    <a href="invitation.html" class="btn-primary" style="font-size:1.05rem;padding:16px 44px;">
+      <span data-hi="📜 निमंत्रण पत्र देखें →" data-en="📜 View Invitation Card →">📜 निमंत्रण पत्र देखें →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p class="fn">Raju ♡ Rani</p>
+  <p>७–८ मई २०२६ &nbsp;·&nbsp; इजरहटा, दरभंगा, बिहार</p>
+  <p>ईश्वर की कृपा से &nbsp;·&nbsp; With Divine Blessings</p>
+</footer>
+
+<script>
+/* ═══ BG SLIDESHOW ═══ */
+const bgUrls = [
+  'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80',
+  'https://images.unsplash.com/photo-1606216840584-71ad99f56e66?w=1920&q=80',
+  'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&q=80',
+  'https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80',
+  'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1920&q=80',
+  'https://images.unsplash.com/photo-1529636798458-92182e662485?w=1920&q=80',
+];
+const bgLayer = document.getElementById('bg-layer');
+const dotsEl  = document.getElementById('dots');
+let curBg=0, bgTimer;
+const bgEls = bgUrls.map((u,i)=>{
+  const d=document.createElement('div');
+  d.className='bg-slide'+(i===0?' active':'');
+  d.style.backgroundImage=`url('${u}')`;
+  bgLayer.appendChild(d);
+  new Image().src=u;
+  const dot=document.createElement('div');
+  dot.className='dot'+(i===0?' on':'');
+  dot.onclick=()=>goBg(i);
+  dotsEl.appendChild(dot);
+  return d;
+});
+const dotEls=dotsEl.querySelectorAll('.dot');
+function goBg(n){
+  bgEls[curBg].classList.remove('active');
+  dotEls[curBg].classList.remove('on');
+  curBg=(n+bgUrls.length)%bgUrls.length;
+  bgEls[curBg].classList.add('active');
+  dotEls[curBg].classList.add('on');
+  clearInterval(bgTimer);
+  bgTimer=setInterval(()=>goBg(curBg+1),5000);
+}
+bgTimer=setInterval(()=>goBg(curBg+1),5000);
+
+/* ═══ GALLERY ═══ */
+const photos=[
+  {url:'images/raju1.jpg'},
+  {url:'images/raju2.jpg'},
+  {url:'images/rani1.jpg'},
+  {url:'images/rani2.jpg'},
+  {url:'images/image1.jpg'},
+  {url:'images/image2.jpg'},
+  {url:'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=900&q=85',hi:'सजावट',en:'Decorations',cls:''},
+  {url:'https://images.unsplash.com/photo-1606216840584-71ad99f56e66?w=900&q=85',hi:'फूलों की सज़ा',en:'Floral Decor',cls:'w2'},
+];
+const gGrid=document.getElementById('g-grid');
+photos.forEach((p,i)=>{
+  const div=document.createElement('div');
+  div.className='gi reveal '+p.cls;
+  div.innerHTML=`<img src="${p.url}" alt="${p.hi}" loading="lazy"><div class="gi-cap"><div class="gi-cap-dv">${p.hi}</div><div class="gi-cap-en">${p.en}</div></div>`;
+  div.onclick=()=>openLb(i);
+  gGrid.appendChild(div);
+});
+
+/* ═══ LIGHTBOX ═══ */
+let curLb=0;
+function openLb(i){
+  curLb=i;
+  document.getElementById('lb-img').src=photos[i].url;
+  document.getElementById('lb-cap').textContent=photos[i].hi+' · '+photos[i].en;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLb(){
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow='';
+}
+function lbNav(d){openLb((curLb+d+photos.length)%photos.length);}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowRight')lbNav(1);
+  if(e.key==='ArrowLeft')lbNav(-1);
+});
+document.getElementById('lb').addEventListener('click',e=>{if(e.target===e.currentTarget)closeLb();});
+
+/* ═══ COUNTDOWN ═══ */
+const target=new Date('2026-05-07T10:00:00');
+function tick(){
+  const d=target-new Date();
+  if(d<=0){document.getElementById('countdown-sec').innerHTML='<p style="color:#FFD984;font-family:Noto Serif Devanagari,serif;font-size:1.2rem;">🎉 शुभ विवाह की बधाई 🎉</p>';return;}
+  document.getElementById('cd-d').textContent=String(Math.floor(d/86400000)).padStart(2,'0');
+  document.getElementById('cd-h').textContent=String(Math.floor((d%86400000)/3600000)).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+  document.getElementById('cd-s').textContent=String(Math.floor((d%60000)/1000)).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+
+/* ═══ LANGUAGE ═══ */
+let curL='hi';
+document.querySelectorAll('.lbtn').forEach(b=>b.addEventListener('click',()=>{
+  curL=b.dataset.l;
+  document.querySelectorAll('[data-hi][data-en]').forEach(el=>{if(el.dataset[curL])el.textContent=el.dataset[curL];});
+  document.querySelectorAll('.lbtn').forEach(x=>x.classList.toggle('on',x.dataset.l===curL));
+}));
+
+/* ═══ SCROLL REVEAL ═══ */
+const obs=new IntersectionObserver(ents=>{
+  ents.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ═══ ACTIVE NAV ═══ */
+const secs=document.querySelectorAll('section[id]');
+const navAs=document.querySelectorAll('.nav a');
+new IntersectionObserver(ents=>{
+  ents.forEach(e=>{if(e.isIntersecting)navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});
+},{threshold:.3}).observe;
+secs.forEach(s=>new IntersectionObserver(ents=>{
+  ents.forEach(e=>{if(e.isIntersecting)navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));});
+},{threshold:.3}).observe(s));
+</script>
+</body>
+</html>
